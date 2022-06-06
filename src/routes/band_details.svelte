@@ -1,0 +1,119 @@
+    <div class="menu">
+        <div>
+            <h4>Genru</h4>
+            <h5><a href="">Jazz</a></h5>
+            <h5><a href="">Rock</a></h5>
+            <h5><a href="">Pop</a></h5>
+            <h5><a href="">Pianist</a></h5>
+            <h5><a href="">DJ</a></h5>
+        </div>
+    </div>
+
+    <div>
+        <div><h1 id="band-name">Band Name</h1></div>
+        <div>
+            <div>Jazz / Soul / Chanson</div>
+            <div>Paris, France</div>
+        </div>
+        <div>
+            <div><a href="#reviews">5/5 (12 comments)</a></div>
+            <div><a href="#contracts">From 1000€</a></div>
+        </div>
+    </div>   
+
+    <div id="description" class="UserPublicPage">
+        <h2>Description</h2>
+        <span>musicians description here</span>
+    </div>
+
+    <div id="videos" class="UserPublicPage">
+        <h2>Videos</h2>
+        <div>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CB3IvFjBKxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div>
+                <button color="white" width="180px" label="See all videos" class="buttons" style="background-color: white; min-width: 120px;">
+                    <span style="text-align: left;">
+                        <div style="align-content: center; justify-content: center;">
+                            <div style="text-align: center; padding-left: 0px; flex: 1 1 0%;">
+                                <span class="secondary-button__Label-tns1yl-0 bZTnEw" style="color: black;">See all videos</span>
+                            </div>
+                        </div>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <h2>Photos</h2>
+        <div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXx5dMcRzVvQPAvGw0ffq50Zp6HrPkA-gDw&usqp=CAU" alt="band">
+            </div>
+            <div>
+                <button color="white" width="180px" label="See all photos" class="buttons" style="background-color: white; min-width: 120px;">
+                    <span style="text-align: left;">
+                        <div style="align-content: center; justify-content: center;">
+                            <div style="text-align: center; padding-left: 0px; flex: 1 1 0%;">
+                                <span class="secondary-button__Label-tns1yl-0 bZTnEw" style="color: black;">See all photos</span>
+                            </div>
+                        </div>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="repertory" class="UserPublicPage">
+        <h2>Repertory</h2>
+        <ul>
+            <li>Fly Me To The Moon - Bart Howard</li>
+            <li>Mr Sandman - The Chordettes</li>
+            <li>Mr Sandman - The Chordettes</li>
+        </ul>
+    </div>
+
+    <div id="contracts" class="UserPublicPage">
+        <h2>Contracts</h2>
+        <div>
+
+            <p style="font-weight: bold; font-size: 20px;">Duo d'Essences</p>
+            <p>Pour une cérémonie ou un évènement très intime.Brésiliennes, classiques ou personnelles: le Duo Vocal Chant &amp; Guitare ou Piano azz manouche et américaines, pour une touche jazzement nostalgique: le Duo Guitare &amp; Basse</p>
+            <div>
+                <div style="width: 200px; text-align: center;">2 musiciens</div>
+                <div style="width: 200px; text-align: center;">2 hours</div>
+                <div style="width: 200px; text-align: center;">from 828 €</div>
+            </div>
+            <div class="ButtonContainer">
+                <button color="#202EB6" width="250px" height="40px" label="Choose" style="background-image: linear-gradient(to right, rgb(32, 46, 182), rgb(96, 111, 255)); border: 0px; margin-top: 20px; font-size: 18px;">Choose</button>
+            </div>
+        </div>
+    </div>
+    <div id="reviews" class="UserPublicPage">
+        <h2>5.0 / 12 Comments</h2>
+        <div>Display rating bar here</div>
+        <div>
+            <div>
+                <span>Anonymous profile</span>
+                <div>
+                    <img src="https://1.bp.blogspot.com/-ZOg0qAG4ewU/Xub_uw6q0DI/AAAAAAABZio/MshyuVBpHUgaOKJtL47LmVkCf5Vge6MQQCNcBGAsYHQ/s400/pose_pien_uruuru_woman.png" alt="user photo" width="50" height="50">
+                </div>
+                <div>
+                    <span>We booked the duo for our wedding. Tour was really perfect! </span>
+                    <span>Read more ›</span>
+                </div>
+            </div>
+            <div>
+                <span>Anonymous profile</span>
+                <div>
+                    <img src="https://1.bp.blogspot.com/-ZOg0qAG4ewU/Xub_uw6q0DI/AAAAAAABZio/MshyuVBpHUgaOKJtL47LmVkCf5Vge6MQQCNcBGAsYHQ/s400/pose_pien_uruuru_woman.png" alt="user photo" width="50" height="50">
+                </div>
+                <div>
+                    <span>We booked the duo for our wedding. Tour was really perfect! </span>
+                    <span>Read more ›</span>
+                </div>
+                </div>
+            </div>
+        </div>
+    <div>
+        Footer here
+    </div>  
