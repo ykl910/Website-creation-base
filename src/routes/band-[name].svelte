@@ -15,11 +15,12 @@
 <script>
     export let type;
     export let name;
+    export let email;
 </script>
 
 {#if name}
     
-<h1>This is {name} band</h1>
+<h1>This is {name} band, please contact them on {email}</h1>
 
 {:else}
 

@@ -27,3 +27,5 @@ export const from = (table: SupaTable) => supabaseClient.from(table)
  * @returns
  */
 export const fromBucket = (bucket: SupaStorageBucket) => supabaseClient.storage.from(bucket)
+
+export default supabaseClient
