@@ -1,0 +1,20 @@
+/* Color Theme Swatches in Hex */
+.Graphic-Design-1-hex { color: #2E83F2; }
+.Graphic-Design-2-hex { color: #2C6CBF; }
+.Graphic-Design-3-hex { color: #A69677; }
+.Graphic-Design-4-hex { color: #F2F2F2; }
+.Graphic-Design-5-hex { color: #0D0D0D; }
+
+/* Color Theme Swatches in RGBA */
+.Graphic-Design-1-rgba { color: rgba(46, 131, 242, 1); }
+.Graphic-Design-2-rgba { color: rgba(43, 107, 191, 1); }
+.Graphic-Design-3-rgba { color: rgba(165, 149, 119, 1); }
+.Graphic-Design-4-rgba { color: rgba(242, 242, 242, 1); }
+.Graphic-Design-5-rgba { color: rgba(12, 12, 12, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Graphic-Design-1-hsla { color: hsla(213, 88, 56, 1); }
+.Graphic-Design-2-hsla { color: hsla(213, 62, 46, 1); }
+.Graphic-Design-3-hsla { color: hsla(39, 20, 55, 1); }
+.Graphic-Design-4-hsla { color: hsla(0, 0, 95, 1); }
+.Graphic-Design-5-hsla { color: hsla(0, 0, 5, 1); }
