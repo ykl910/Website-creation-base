@@ -5,21 +5,24 @@
 
 /* purge start ignore */
 @layer base {
+
     body {
-        @apply antialiased text-gray-600 bg-black;
+        @apply antialiased text-blue-600 bg-black;
         @apply leading-normal tracking-normal text-base font-normal break-words;
         @apply font-sans text-base lg:text-xl;
+        @apply p-8 mx-auto;
+        @apply bg-black;
     }
 
     main {
-        @apply p-8 pt-32 md:pt-24 mx-auto max-w-4xl;
-        @apply text-center;
+        @apply text-left;
         @apply bg-black;
     }
 
     a {
-        @apply text-blue-600;
-        @apply no-underline hover:underline focus:outline-none focus:underline;
+        @apply text-white;
+        @apply mr-3;
+        @apply hover:underline focus:outline-none focus:underline;
     }
 
     form {
@@ -27,24 +30,38 @@
         @apply bg-black;
     }
 
+    h1 {
+        @apply p-8 pt-32 mx-auto;
+        @apply bg-black;
+    }
+
+    nav {
+        @apply bg-black;
+        @apply flex-1 overflow-y-auto p-5 rounded
+    }
+    header {
+        @apply mx-auto;
+        @apply bg-black;
+    }
+
     button {
-        @apply font-bold py-2 px-4 mx-auto rounded;
-        @apply bg-blue-500 text-white;
+        @apply py-1 px-3 rounded;
+        @apply text-white;
         @apply hover:bg-blue-700
     }
 
     label {
-        @apply font-bold py-4 px-4 my-2;
+        @apply font-bold mr-5 py-4;
         @apply text-blue-500;
         @apply inline-block
 
     }
 
     input {
-        @apply font-bold py-4 px-4 my-2;
-        @apply text-blue-500;
+        @apply font-bold py-4 px-4 ml-10 rounded;
+        @apply text-black;
         @apply hover:bg-blue-100;
-        @apply inline-block
+        @apply inline-block;
     }
 }
   

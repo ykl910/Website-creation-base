@@ -3,7 +3,7 @@
     import { signOut } from '$lib/user'
     import { user } from '$lib/user'
 </script>
-<nav class="h-14 bg-white w-screen mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 shadow-sm" >
+<nav class="h-14 bg-blue-900 w-screen mx-auto max-w-7xl sm:px-2 lg:px-2 shadow-sm" >
     <ul class="list-none h-full flex items-center justify-end gap-3">
         {#if $user}
             <li class="nav__item">
@@ -12,10 +12,23 @@
 				</a>
             </li>
             <li class="nav__item">
-                <a rel="prefetch" href="/profile/@me">
-                    {$user.email}
+                <a rel="prefetch" href="/home">
+                    Home
                 </a>
             </li>
+
+            <li class="nav__item">
+                <a rel="prefetch" href="/band_list">
+                    Band lists
+                </a>
+            </li>
+
+            <li class="nav__item">
+                <a rel="prefetch" href="/band_registration">
+                    Band registration
+                </a>
+            </li>
+
             <button class="" on:click={() => signOut()}>Sign Out</button>
         {:else}
             <li class="nav__item">
