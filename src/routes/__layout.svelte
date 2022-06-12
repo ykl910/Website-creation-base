@@ -12,9 +12,8 @@
 {/if}
 <Header/>
 
-
 <AlertList/>
-<main class=" mx-auto max-w-7xl sm:px-6 lg:px-8 bg-black">
+<main>
     <slot>
     </slot>
 </main>

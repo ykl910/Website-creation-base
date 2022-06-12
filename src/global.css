@@ -7,16 +7,20 @@
 @layer base {
 
     body {
-        @apply antialiased text-blue-600 bg-black;
-        @apply leading-normal tracking-normal text-base font-normal break-words;
-        @apply font-sans text-base lg:text-xl;
-        @apply p-8 mx-auto;
+        @apply font-sans text-gray-100 font-normal antialiased;
+        @apply tracking-normal text-base lg:text-xl;
+        @apply break-words;
+        @apply p-0 mx-0;
         @apply bg-black;
     }
 
     main {
         @apply text-left;
-        @apply bg-black;
+        @apply lg:p-8 sm:px-6;
+        @apply pt-16;
+        @apply max-w-7xl;
+        @apply mx-auto;
+        
     }
 
     a {
@@ -31,23 +35,13 @@
     }
 
     h1 {
-        @apply p-8 pt-32 mx-auto;
-        @apply bg-black;
-    }
-
-    nav {
-        @apply bg-black;
-        @apply flex-1 overflow-y-auto p-5 rounded
-    }
-    header {
-        @apply mx-auto;
-        @apply bg-black;
+        @apply text-2xl font-bold;
     }
 
     button {
         @apply py-1 px-3 rounded;
         @apply text-white;
-        @apply hover:bg-blue-700
+        @apply bg-blue-600 hover:bg-blue-700 !important;
     }
 
     label {

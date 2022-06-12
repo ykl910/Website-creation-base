@@ -9,7 +9,7 @@
     }
 </script>
 
-<header class="w-full float">
+<header class="w-full fixed bg-black">
     <NavBar />
 
     {#if isNavOpened}

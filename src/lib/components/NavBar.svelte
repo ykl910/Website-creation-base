@@ -3,8 +3,8 @@
     import { signOut } from '$lib/user'
     import { user } from '$lib/user'
 </script>
-<nav class="h-14 bg-blue-900 w-screen mx-auto max-w-7xl sm:px-2 lg:px-2 shadow-sm" >
-    <ul class="list-none h-full flex items-center justify-end gap-3">
+<nav class="h-14 sm:px-2 lg:px-2 shadow-sm border-b-2 border-gray-900" >
+    <ul class="list-none h-full max-w-7xl flex items-center justify-end gap-3">
         {#if $user}
             <li class="nav__item">
                 <a rel="prefetch" href="/settings" class:active={new URL($page.url).pathname === '/settings'}>

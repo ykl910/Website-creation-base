@@ -21,18 +21,17 @@
     export let mobile_number;
     export let number_of_members;
     export let website;
-    let mainphoto = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXx5dMcRzVvQPAvGw0ffq50Zp6HrPkA-gDw&usqp=CAU.png';
+    let mainphoto = 'https://media.gettyimages.com/photos/portrait-of-a-rock-band-picture-id74075509?s=612x612';
     let video = 'https://www.youtube.com/embed/CB3IvFjBKxs';
 </script>
 
-<div class="container mx-xl">
 
 {#if name}
 
-<div class="flex flex-row mb-12">
+<div class="lg:flex lg:flex-row mb-12">
     <div class="basis-1/2">
         <div class="my-8">
-            <p class="text-2xl font-bold">{name}</p>
+            <h1>{name}</h1>
             <p class="text-base">Genre: {type}</p>
         </div>
         <div class="my-8"> 
@@ -48,26 +47,26 @@
 </div>
 
 <div class="mb-12">
-    <div class="flex flex-row">
-        <div class="basis-1/4 border-b py-8"><p class="text-base">Event</p></div>
+    <div class="lg:flex lg:flex-row">
+        <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Event</p></div>
         <div class="basis-3/4 border-b py-8"><p class="text-base">{type_of_event}</p></div>
     </div>
-    <div class="flex flex-row">
-        <div class="basis-1/4 border-b py-8"><p class="text-base">Contracts</p></div>
+    <div class="lg:flex lg:flex-row">
+        <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Contracts</p></div>
         <div class="basis-3/4 border-b py-8"><p class="text-base">1000€ add price in supabase</p></div>
     </div>
-    <div class="flex flex-row">
-        <div class="basis-1/4 border-b py-8"><p class="text-base">Member</p></div>
+    <div class="lg:flex lg:flex-row">
+        <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Member</p></div>
         <div class="basis-3/4 border-b py-8"><p class="text-base">{number_of_members}<br>member name here?</p></div>
     </div>
     {#if website}
-    <div class="flex flex-row">
-        <div class="basis-1/4 border-b py-8"><p class="text-base">Website</p></div>
+    <div class="lg:flex lg:flex-row">
+        <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Website</p></div>
         <div class="basis-3/4 border-b py-8"><p class="text-base">{website}</p></div>
     </div>
     {/if}
-    <div class="flex flex-row">
-        <div class="basis-1/4 border-b py-8"><p class="text-base">Contact</p></div>
+    <div class="lg:flex lg:flex-row">
+        <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Contact</p></div>
         <div class="basis-3/4 border-b py-8"><p class="text-base">{email}<br>{mobile_number}</p></div>
     </div>
 </div>
@@ -84,5 +83,3 @@
 
 <h1>This band is not available</h1>
 {/if}
-
-</div>
