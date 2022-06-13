@@ -34,16 +34,26 @@
         @apply bg-black;
     }
 
-    p{
+    p, ul{
         @apply text-base;
     }
 
+    h4{
+        @apply text-base;
+        @apply font-extrabold;
+    }
+    h3{
+        @apply text-xl;
+        @apply font-extrabold;
+    }
     h2{
-        @apply text-xl font-bold;
+        @apply text-2xl;
+        @apply font-black;
     }
 
     h1 {
-        @apply text-2xl font-bold;
+        @apply text-3xl;
+        @apply font-black;
     }
 
     button {

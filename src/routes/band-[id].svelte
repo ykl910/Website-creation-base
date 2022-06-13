@@ -55,10 +55,6 @@
         <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Contracts</p></div>
         <div class="basis-3/4 border-b py-8"><p class="text-base">{price}€</p></div>
     </div>
-    <div class="lg:flex lg:flex-row">
-        <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Member</p></div>
-        <div class="basis-3/4 border-b py-8"><p class="text-base">{number_of_members}</p></div>
-    </div>
     {#if website}
     <div class="lg:flex lg:flex-row">
         <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Website</p></div>

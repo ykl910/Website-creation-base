@@ -105,7 +105,6 @@
     .multiselect:not(.readonly):hover {
       border-bottom-color: hsl(0, 0%, 50%);
     }
-  
     .tokens {
       align-items: center;
       display: flex;
