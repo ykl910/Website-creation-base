@@ -3,18 +3,19 @@
 <script context='module'>
     import  supabaseClient  from '../../src/lib/supabase';
     let name, type_of_music, mobile_number, email, number_of_members, website, short_description, type_of_event;
-    const getData = async () => {
+    export async function load({ fetch, session }) {
         const { data, error } = await supabaseClient
             .from('band')
-            .select('*')
-        return { data, error };
+            .select()
+        console.log(data);
+        return { props:{bands:data}, error };
         
     };
-    console.log(getData)
 </script>
 
 <script>
     export let name;
+    export let bands;
     export let type_of_music;
     export let mobile_number;
     export let email;
@@ -26,3 +27,7 @@
 
     
 <h1>This is {name} band, please contact them on {email}</h1>
+<p>{bands.length}</p>
+{#each bands as band}
+    <p>{band.name}</p>
+{/each}
