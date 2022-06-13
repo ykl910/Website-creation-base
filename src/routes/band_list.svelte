@@ -47,7 +47,7 @@
 	  <option value="country">Counry</option>
 	</MultiSelect>
 
-	<button on:click={search}>button</button>
+	<button on:click={search}>Search</button>
 </div>
 
 

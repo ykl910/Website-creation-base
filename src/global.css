@@ -57,7 +57,7 @@
     }
 
     button {
-        @apply py-1 px-3 rounded;
+        @apply py-1 px-3 my-5 rounded;
         @apply text-white;
         @apply bg-blue-600 hover:bg-blue-700 !important;
     }
