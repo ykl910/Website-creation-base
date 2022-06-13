@@ -42,11 +42,11 @@
     <div class="container">
         <label for="type_of_event">Type of event</label>
         <MultiSelect bind:value={type_of_event}>
-          <option value="Company_events"><span class = "text-black" >Company events</span></option>
-          <option value="Weddings">Weddings</option>
-          <option value="Restaurants">Restaurants</option>
-          <option value="Bars">Bars</option>
-          <option value="Private_beaches">Private beaches</option>
+          <option value="company_events"><span class = "text-black" >Company events</span></option>
+          <option value="weddings">Weddings</option>
+          <option value="restaurants">Restaurants</option>
+          <option value="bars">Bars</option>
+          <option value="private_beaches">Private beaches</option>
         </MultiSelect>
     </div>
     <div class="container">
