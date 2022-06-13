@@ -1,8 +1,5 @@
-<h1>This page displays all the bands in form of blocks</h1>
-
 <script context='module'>
     import  supabaseClient  from '../../src/lib/supabase';
-    let name, type_of_music, mobile_number, email, number_of_members, website, short_description, type_of_event;
     export async function load({ fetch, session }) {
         const { data, error } = await supabaseClient
             .from('band')
@@ -23,11 +20,14 @@
     export let website;
     export let type_of_event;
     export let short_description;
+    export let video_url;
 </script>
 
     
-<h1>This is {name} band, please contact them on {email}</h1>
 <p>{bands.length}</p>
 {#each bands as band}
     <p>{band.name}</p>
+    <p>{band.bands}</p>
+    <p>{band.type_of_music}</p>
+    <p>{band.video_url}</p>
 {/each}
