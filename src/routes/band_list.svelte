@@ -30,7 +30,7 @@ import { identity } from 'svelte/internal';
             <h2>{band.name}</h2>
             <p>{#if band.type_of_music}{band.type_of_music}{:else}<span class="text-gray-400">No specific type of music</span>{/if}</p>
             <p>{#if band.type_of_event}{band.type_of_event}{:else}<span class="text-gray-400">No specific type of event</span>{/if}</p>
-            <p><a href="http://localhost:3000/band-{band.id}" class="text-blue-500">show detial </a></p>
+            <p><a href="http://localhost:3000/band-{band.id}" class="text-blue-500">more details </a></p>
         </div>
     {/each}
     
