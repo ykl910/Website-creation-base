@@ -1,6 +1,3 @@
-
-
-
 <script>
     import  supabaseClient  from '../../src/lib/supabase';
 	import MultiSelect from './MultiSelect.svelte';
@@ -13,62 +10,62 @@
 
         return { data, error };
     };
+
+    function submitted() {
+        alert('Submitted!')
+    }
 </script>
 
 <h1>Register your band and wait to be contacted!</h1>
 <img src="static/registration.jpg" alt="band">
 
 <form action="" on:submit|preventDefault={sendData}>
-    <div class="container">
-        <label for="name">Name</label>
-        <input type="text" bind:value={name} />
+    <div class="mb-12">
+        <div class="lg:flex lg:flex-row">
+            <div class="basis-1/4"><label for="name">Name</label></div>
+            <div class="basis-3/4"><input type="text" bind:value={name} /></div>
+        </div>
+        <div class="lg:flex lg:flex-row">
+            <div class="basis-1/4"><label for="type_of_music">Type of music</label></div>
+            <div class="basis-3/4"><input type="text" bind:value={type_of_music} /></div>
+        </div>
+        <div class="lg:flex lg:flex-row">
+            <div class="basis-1/4"><label for="mobile">Mobile</label></div>
+            <div class="basis-3/4"><input type="text" bind:value={mobile_number} /></div>
+        </div>
+        <div class="lg:flex lg:flex-row">
+            <div class="basis-1/4"><label for="type_of_event">Type of event</label></div>
+            <div class="basis-3/4">
+                <MultiSelect bind:value={type_of_event}>
+                    <option value="Company_events">Company events</option>
+                    <option value="Weddings">Weddings</option>
+                    <option value="Restaurants">Restaurants</option>
+                    <option value="Bars">Bars</option>
+                    <option value="Private_beaches">Private beaches</option>
+                </MultiSelect>
+            </div>
+        </div>
+        <div class="lg:flex lg:flex-row">
+            <div class="basis-1/4"><label for="website">Website</label></div>
+            <div class="basis-3/4"><input type="text" bind:value={website} /></div>
+        </div>
+        <div class="lg:flex lg:flex-row">
+            <div class="basis-1/4"><label for="price">Price</label></div>
+            <div class="basis-3/4"><input type="text" bind:value={price} /></div>
+        </div>
+        <div class="lg:flex lg:flex-row">
+            <div class="basis-1/4"><label for="picture_url">Picture</label></div>
+            <div class="basis-3/4"><input type="text" bind:value={picture_url} /></div>
+        </div>
+        <div class="lg:flex lg:flex-row">
+            <div class="basis-1/4"><label for="video_url">Video</label></div>
+            <div class="basis-3/4"><input type="text" bind:value={video_url} /></div>
+        </div>
+        <div class="lg:flex lg:flex-row">
+            <div class="basis-1/4"><label for="short_description">Short description</label></div>
+            <div class="basis-3/4"><input type="text" bind:value={short_description} /></div>
+        </div>
     </div>
-    <div class="container">
-        <label for="type_of_music">Type of music</label>
-        <input type="text" bind:value={type_of_music} />
-    </div>
-    <div class="container">
-        <label for="mobile">Mobile</label>
-        <input type="text" bind:value={mobile_number} />
-    </div>
-    <!-- <div class="container"> -->
-        <label for="email">Email</label>
-        <input type="text" bind:value={email} />
-    <!--</div>-->
-    <div class="container">
-        <label for="number_of_members">Number of members</label>
-        <input type="text" bind:value={number_of_members} />
-    </div>
-    <div class="container">
-        <label for="type_of_event">Type of event</label>
-        <MultiSelect bind:value={type_of_event}>
-          <option value="Company_events"><span class = "text-black" >Company events</span></option>
-          <option value="Weddings">Weddings</option>
-          <option value="Restaurants">Restaurants</option>
-          <option value="Bars">Bars</option>
-          <option value="Private_beaches">Private beaches</option>
-        </MultiSelect>
-    </div>
-    <div class="container">
-        <label for="website">Website</label>
-        <input type="text" bind:value={website} />
-    </div>
-    <div class="container">
-        <label for="price">Price</label>
-        <input type="text" bind:value={price} />
-    </div>
-    <div class="container">
-        <label for="picture_url">Picture</label>
-        <input type="text" bind:value={picture_url} />
-    </div>
-    <div class="container">
-        <label for="video_url">Video</label>
-        <input type="text" bind:value={video_url} />
-    </div>
-    <div class="container">
-        <label for="short_description">Short description</label>
-        <input type="text" bind:value={short_description} />
-    </div>
-
-    <button type="submit">Send</button>
 </form>
+
+<button type="submit" on:click={submitted}>Send</button>

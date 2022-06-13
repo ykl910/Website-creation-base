@@ -100,6 +100,7 @@
       background-color: white;
       border-bottom: 1px solid hsl(0, 0%, 70%);
       position: relative;
+      padding: 6px;
     }
     .multiselect:not(.readonly):hover {
       border-bottom-color: hsl(0, 0%, 50%);
@@ -140,6 +141,10 @@
     }
     .token:hover {
       background-color: hsl(214, 15%, 88%);
+    }
+
+    .token span{
+      color: black;
     }
     .readonly .token {
       color: hsl(0, 0%, 40%);
@@ -205,6 +210,7 @@
       background-color: white;
       cursor: pointer;
       padding: .5rem;
+      color: black;
     }
     li:last-child {
       border-bottom-left-radius: .2rem;
