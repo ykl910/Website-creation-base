@@ -13,30 +13,28 @@
 </script>
 
 <script>
-    export let type;
     export let name;
     export let email;
+    export let type_of_music;
     export let type_of_event;
     export let short_description;
     export let mobile_number;
-    export let number_of_members;
     export let website;
     export let price;
     export let picture_url;
     export let video_url;
 </script>
 
-
 {#if name}
 
-<div class="lg:flex lg:flex-row mb-12">
+<div class="md:flex md:flex-row mb-12">
     <div class="basis-1/2">
         <div class="my-8">
             <h1>{name}</h1>
-            <p class="text-base">Genre: {type}</p>
+            <p>{#if type_of_music}Genre: {type_of_music}{:else}No specific genre{/if}</p>
         </div>
         <div class="my-8"> 
-            <p class="text-base">{short_description}</p>   
+            <p>{short_description}</p>   
         </div>
     </div>
     <div class="basis-1/2">
@@ -47,32 +45,33 @@
 </div>
 
 <div class="mb-12">
-    <div class="lg:flex lg:flex-row">
-        <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Event</p></div>
-        <div class="basis-3/4 border-b py-8"><p class="text-base">{type_of_event}</p></div>
+    <div class="md:flex md:flex-row">
+        <div class="basis-1/4 md:border-b py-8"><p>Event</p></div>
+        <div class="basis-3/4 border-b py-8"><p>{type_of_event}</p></div>
     </div>
-    <div class="lg:flex lg:flex-row">
-        <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Contracts</p></div>
-        <div class="basis-3/4 border-b py-8"><p class="text-base">{price}€</p></div>
+    <div class="md:flex md:flex-row">
+        <div class="basis-1/4 md:border-b py-8"><p>Contracts</p></div>
+        <div class="basis-3/4 border-b py-8"><p>{price}€</p></div>
     </div>
     {#if website}
-    <div class="lg:flex lg:flex-row">
-        <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Website</p></div>
-        <div class="basis-3/4 border-b py-8"><p class="text-base">{website}</p></div>
+    <div class="md:flex md:flex-row">
+        <div class="basis-1/4 md:border-b py-8"><p>Website</p></div>
+        <div class="basis-3/4 border-b py-8"><p>{website}</p></div>
     </div>
     {/if}
-    <div class="lg:flex lg:flex-row">
-        <div class="basis-1/4 lg:border-b py-8"><p class="text-base">Contact</p></div>
-        <div class="basis-3/4 border-b py-8"><p class="text-base">{email}<br>{mobile_number}</p></div>
+    <div class="md:flex md:flex-row">
+        <div class="basis-1/4 md:border-b py-8"><p>Contact</p></div>
+        <div class="basis-3/4 border-b py-8"><p>{email}<br>{mobile_number}</p></div>
     </div>
-
-    <div class="lg:flex lg:flex-row">
-        <div class="basis-1/4 py-8"><p class="text-base">Video</p></div>
-        <div class="basis-3/4 py-8"><iframe width="560" height="315"  src = {video_url}
+    {#if video_url}
+    <div class="md:flex md:flex-row">
+        <div class="basis-1/4 py-8"><p>Video</p></div>
+        <div class="basis-3/4 py-8 responsive-youtube"><iframe height=100% src = {video_url}
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen></iframe></div>
     </div>
+    {/if}
 </div>
 {:else}
 
