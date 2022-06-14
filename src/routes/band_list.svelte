@@ -1,10 +1,17 @@
 <script context='module'>
 	import MultiSelect from './MultiSelect.svelte';
     import  supabaseClient  from '../../src/lib/supabase';
+
+	export async function load({ fetch, session }) {
+        const { data, error } = await supabaseClient
+            .from('band')
+            .select()
+        console.log(data);
+        return { props:{bands:data}, error };
+    };
 </script>
 
 <script>
-
 	export async function search() {
 		console.log(type_of_event);
 		console.log(type_of_music);
@@ -19,12 +26,15 @@
 
 	export let search_results = [ ];
 	export let bands;    
-	export let id;
-	export let name;
-	export let short_description;
 	let type_of_music;
 	let type_of_event;
+
+	function hide(){
+		var i = document.getElementById("initial");
+		i.style.display = "none";
+  	}
 </script>
+
 
 <div class="container z-50">
 	<label for="type_of_event">Type of event</label>
@@ -47,7 +57,7 @@
 	  <option value="country">Counry</option>
 	</MultiSelect>
 
-	<button on:click={search}>Search</button>
+	<button on:click={search} on:click={hide}>Search</button>
 </div>
 
 
@@ -62,4 +72,15 @@
         </div>
     {/each}
     
+</div>
+
+<div class="grid lg:grid-cols-3 gap-8" id="initial"> 
+    {#each bands as band}
+        <div class="bg-white text-black p-6">
+            <h2>{band.name}</h2>
+            <p>{#if band.type_of_music}{band.type_of_music}{:else}<span class="text-gray-400">No specific type of music</span>{/if}</p>
+            <p>{#if band.type_of_event}{band.type_of_event}{:else}<span class="text-gray-400">No specific type of event</span>{/if}</p>
+            <p><a href="http://localhost:3000/band-{band.id}" class="text-blue-500">more details </a></p>
+        </div>
+    {/each}
 </div>
