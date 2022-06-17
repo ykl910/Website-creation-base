@@ -16,9 +16,19 @@
     }
 </script>
 
-<h1>Register your band and wait to be contacted!</h1>
-<img src="static/registration.jpg" alt="band">
 
+<style>
+    img { 
+        object-fit: cover;
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+    }
+</style>
+
+<h1>Register your band and wait to be contacted!</h1>
+<br>
+<img src="static/registration.jpg" alt="band">
 <form action="" on:submit|preventDefault={sendData}>
     <div class="mb-12">
         <div class="lg:flex lg:flex-row">
@@ -32,6 +42,10 @@
         <div class="lg:flex lg:flex-row">
             <div class="basis-1/4"><label for="mobile">Mobile</label></div>
             <div class="basis-3/4"><input type="text" bind:value={mobile_number} /></div>
+        </div>
+        <div class="lg:flex lg:flex-row">
+            <div class="basis-1/4"><label for="email">Email</label></div>
+            <div class="basis-3/4"><input type="text" bind:value={email} /></div>
         </div>
         <div class="lg:flex lg:flex-row">
             <div class="basis-1/4"><label for="type_of_event">Type of event</label></div>
@@ -67,5 +81,4 @@
         </div>
     </div>
 </form>
-
-<button type="submit" on:click={submitted}>Send</button>
+<button type="submit" on:click={sendData} on:click={submitted}>Send</button>

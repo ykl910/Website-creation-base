@@ -35,31 +35,31 @@
   	}
 </script>
 
+<div class="grid lg:grid-cols-2 gap-6">
+	<div class="container z-50">
+		<label for="type_of_event">Type of event</label>
+		<MultiSelect bind:value={type_of_event}>
+			<option value="company_events"><span class = "text-black" >Company events</span></option>
+			<option value="weddings">Weddings</option>
+			<option value="restaurants">Restaurants</option>
+			<option value="bars">Bars</option>
+			<option value="private_beaches">Private beaches</option>
+		</MultiSelect>
+	</div>
+	<div class="container z-10">
+		<label for="type_of_music">Type of music</label>
+		<MultiSelect bind:value={type_of_music}>
+		<option value="hiphop" class="z-10">Hiphop</option>
+		<option value="jazz">Jazz</option>
+		<option value="rock">Rock</option>
+		<option value="classical">Classical</option>
+		<option value="electronic">Electronic</option>
+		<option value="country">Country</option>
+		</MultiSelect>
 
-<div class="container z-50">
-	<label for="type_of_event">Type of event</label>
-	<MultiSelect bind:value={type_of_event}>
-		<option value="company_events"><span class = "text-black" >Company events</span></option>
-		<option value="weddings">Weddings</option>
-		<option value="restaurants">Restaurants</option>
-		<option value="bars">Bars</option>
-		<option value="private_beaches">Private beaches</option>
-	</MultiSelect>
+	</div>
 </div>
-<div class="container z-10">
-	<label for="type_of_music">Type of music</label>
-	<MultiSelect bind:value={type_of_music}>
-	  <option value="hiphop" class="z-10">Hiphop</option>
-	  <option value="jazz">Jazz</option>
-	  <option value="rock">Rock</option>
-	  <option value="classical">Classical</option>
-	  <option value="electronic">Electronic</option>
-	  <option value="country">Counry</option>
-	</MultiSelect>
-
-	<button on:click={search} on:click={hide}>Search</button>
-</div>
-
+<button on:click={search} on:click={hide}>Search</button>
 
 
 <div class="grid lg:grid-cols-3 gap-8"> 

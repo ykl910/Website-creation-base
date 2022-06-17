@@ -30,7 +30,7 @@
     }
 
     form {
-        @apply p-8 pt-32 mx-auto;
+        @apply p-8 pt-16 mx-auto;
         @apply bg-black;
     }
 
