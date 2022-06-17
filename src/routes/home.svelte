@@ -113,11 +113,6 @@ img {
             </div>
         </div> 
 
-        <!---<h4>Popular bands</h4>
-        <p>BandName1</p>
-        <p>BandName2</p>
-        <p>BandName3</p> --->
-
         <h4>Excellent global rating</h4>
         <p>92 % of our clients recommend us, with a global rating of "excellent"</p> 
 
