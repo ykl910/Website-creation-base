@@ -35,6 +35,19 @@
   	}
 </script>
 
+<style> 
+	.band {
+		background-color: white;
+		color: black;
+		padding: 18px;
+		border-radius: 10px;
+		transition: all .2s;
+		}
+	.band:hover {
+	  transform: scale(1.05);
+	}
+</style>
+
 <div class="grid lg:grid-cols-2 gap-6">
 	<div class="container z-50">
 		<label for="type_of_event">Type of event</label>
@@ -64,7 +77,7 @@
 
 <div class="grid lg:grid-cols-3 gap-8"> 
     {#each search_results as band}
-        <div class="bg-white text-black p-6">
+        <div class="band">
             <h2>{band.name}</h2>
             <p>{#if band.type_of_music}{band.type_of_music}{:else}<span class="text-gray-400">No specific type of music</span>{/if}</p>
             <p>{#if band.type_of_event}{band.type_of_event}{:else}<span class="text-gray-400">No specific type of event</span>{/if}</p>
@@ -76,7 +89,7 @@
 
 <div class="grid lg:grid-cols-3 gap-8" id="initial"> 
     {#each bands as band}
-        <div class="bg-white text-black p-6">
+        <div class="band">
             <h2>{band.name}</h2>
             <p>{#if band.type_of_music}{band.type_of_music}{:else}<span class="text-gray-400">No specific type of music</span>{/if}</p>
             <p>{#if band.type_of_event}{band.type_of_event}{:else}<span class="text-gray-400">No specific type of event</span>{/if}</p>

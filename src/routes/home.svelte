@@ -36,6 +36,7 @@ img {
     height: 300px;
     width: 400px;
     overflow: hidden;
+    border-radius: 4%
 }
     
 </style>
