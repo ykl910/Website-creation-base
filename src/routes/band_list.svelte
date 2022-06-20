@@ -32,6 +32,8 @@
 	function hide(){
 		var i = document.getElementById("initial");
 		i.style.display = "none";
+		var j = document.getElementById("show");
+		j.style.display = "block";
   	}
 </script>
 
@@ -52,7 +54,7 @@
 	<div class="container z-50">
 		<label for="type_of_event">Type of event</label>
 		<MultiSelect bind:value={type_of_event}>
-			<option value="company_events"><span class = "text-black" >Company events</span></option>
+			<option value="company_events">Company events</option>
 			<option value="weddings">Weddings</option>
 			<option value="restaurants">Restaurants</option>
 			<option value="bars">Bars</option>
@@ -74,21 +76,27 @@
 </div>
 <button on:click={search} on:click={hide}>Search</button>
 
-
+<div id="show" style="display:none">
+	<h2>Search results</h2>
+	{#if type_of_music==""}
+	Please select at least one type of music
+	{/if}
+</div>
 <div class="grid lg:grid-cols-3 gap-8"> 
     {#each search_results as band}
         <div class="band">
             <h2>{band.name}</h2>
             <p>{#if band.type_of_music}{band.type_of_music}{:else}<span class="text-gray-400">No specific type of music</span>{/if}</p>
             <p>{#if band.type_of_event}{band.type_of_event}{:else}<span class="text-gray-400">No specific type of event</span>{/if}</p>
-            <p><a href="http://localhost:3000/band-{band.id}" class="text-blue-500">more details </a></p>
+            <p><a href="http://localhost:3000/band-{band.id}" class="text-blue-500" target="_blank">more details </a></p>
         </div>
     {/each}
-    
 </div>
 
-<div class="grid lg:grid-cols-3 gap-8" id="initial"> 
-    {#each bands as band}
+<div id="initial">
+<h2>All bands</h2>
+<div class="grid lg:grid-cols-3 gap-8"> 
+	{#each bands as band}
         <div class="band">
             <h2>{band.name}</h2>
             <p>{#if band.type_of_music}{band.type_of_music}{:else}<span class="text-gray-400">No specific type of music</span>{/if}</p>
@@ -96,4 +104,5 @@
             <p><a href="http://localhost:3000/band-{band.id}" class="text-blue-500">more details </a></p>
         </div>
     {/each}
+</div>
 </div>
