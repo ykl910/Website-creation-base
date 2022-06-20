@@ -79,18 +79,18 @@
 <div id="show" style="display:none">
 	<h2>Search results</h2>
 	{#if type_of_music==""}
-	Please select at least one type of music
-	{/if}
+	<p>Please select at least one type of music</p>{/if}
+	{#if search_results==""}<p>No band available</p>{/if}
 </div>
 <div class="grid lg:grid-cols-3 gap-8"> 
-    {#each search_results as band}
+	{#each search_results as band}
         <div class="band">
             <h2>{band.name}</h2>
             <p>{#if band.type_of_music}{band.type_of_music}{:else}<span class="text-gray-400">No specific type of music</span>{/if}</p>
             <p>{#if band.type_of_event}{band.type_of_event}{:else}<span class="text-gray-400">No specific type of event</span>{/if}</p>
             <p><a href="http://localhost:3000/band-{band.id}" class="text-blue-500" target="_blank">more details </a></p>
         </div>
-    {/each}
+{/each}
 </div>
 
 <div id="initial">
