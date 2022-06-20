@@ -51,11 +51,11 @@
             <div class="basis-1/4"><label for="type_of_event">Type of event</label></div>
             <div class="basis-3/4">
                 <MultiSelect bind:value={type_of_event}>
-                    <option value="Company_events">Company events</option>
-                    <option value="Weddings">Weddings</option>
-                    <option value="Restaurants">Restaurants</option>
-                    <option value="Bars">Bars</option>
-                    <option value="Private_beaches">Private beaches</option>
+                    <option value="company_events">Company events</option>
+                    <option value="weddings">Weddings</option>
+                    <option value="restaurants">Restaurants</option>
+                    <option value="bars">Bars</option>
+                    <option value="private_beaches">Private beaches</option>
                 </MultiSelect>
             </div>
         </div>
