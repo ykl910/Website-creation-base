@@ -71,15 +71,14 @@
 		<option value="electronic">Electronic</option>
 		<option value="country">Country</option>
 		</MultiSelect>
-
+		{#if type_of_music==""}<p>Please select at least one type of music</p>{/if}
 	</div>
+	
 </div>
 <button on:click={search} on:click={hide}>Search</button>
 
 <div id="show" style="display:none">
 	<h2>Search results</h2>
-	{#if type_of_music==""}
-	<p>Please select at least one type of music</p>{/if}
 	{#if search_results==""}<p>No band available</p>{/if}
 </div>
 <div class="grid lg:grid-cols-3 gap-8"> 
